@@ -3,17 +3,15 @@ import "./App.css";
 import Button from "./Button";
 
 /**
- * Challenge:
+ * Challenge: Make the Button accept and display children.
  *
- * Build a Button component in a separate file.
- * (For styling purposes, make sure it renders an HTML <button> element)
- * Your button component should take a `text` prop
+ * Change the text to say "Buy now!" so it's less boring 🥱
  */
 
 function App() {
   return (
     <main>
-      <Button text="Click me" />
+      <Button>Buy now!</Button>
     </main>
   );
 }
