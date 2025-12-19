@@ -4,13 +4,15 @@ import Button from "./Button";
 import { FaMoneyBill } from "react-icons/fa6";
 
 /**
- * Challenge: Add an onClick handler to the Button
- * component instance (the one on this page). Then
- * make whatever changes you need for it to actually
- * work.
+ * Challenge: accept the `size` prop and set the `className` of the
+ * <button> to:
  *
- * Clicking the button should log "Logging in..."
- * to the console.
+ * "button-small" if `size` is "sm"
+ * "button-large" if `size` is "lg"
+ *
+ * Note: don't try to manually add a `className` to the Button
+ * instance in index.js yet. (DO add `className` to this file
+ * as part of the challenge, though.)
  */
 
 const handleClick = () => console.log("Logging in...");
@@ -18,7 +20,7 @@ const handleClick = () => console.log("Logging in...");
 function App() {
   return (
     <main>
-      <Button onClick={handleClick}>
+      <Button onClick={handleClick} size="lg">
         <FaMoneyBill />
         Buy now!
       </Button>

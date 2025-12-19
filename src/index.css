@@ -32,3 +32,12 @@ button {
   justify-content: center;
   gap: 0.5rem;
 }
+
+button.button-small {
+  padding: 7px 11px;
+  font-size: 12px;
+}
+
+button.button-large {
+  padding: 30px 40px;
+}
