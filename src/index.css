@@ -41,3 +41,7 @@ button.button-small {
 button.button-large {
   padding: 30px 40px;
 }
+
+.green {
+  color: green;
+}

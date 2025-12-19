@@ -1,18 +1,20 @@
-const Button = ({ children, onClick, size }) => {
-  const setSize = () => {
-    if (size === "sm") return "button-small";
-    if (size === "lg") return "button-large";
-    return;
-  };
+const Button = ({ className, children, size, ...rest }) => {
+  /**
+   * Challenge: See if you can fix the problem with the
+   * conflicting `className` props. Doesn't need to be
+   * elegant, just see if you can get the button to be
+   * both large AND with green text
+   */
+
+  let sizeClass;
+  if (size === "sm") sizeClass = "button-small";
+  if (size === "lg") sizeClass = "button-large";
 
   return (
-    <button onClick={onClick} className={setSize()}>
+    <button className={`${sizeClass} ${className}`} {...rest}>
       {children}
     </button>
   );
 };
 
 export default Button;
-
-//  * "button-small" if `size` is "sm"
-//  * "button-large" if `size` is "lg"
