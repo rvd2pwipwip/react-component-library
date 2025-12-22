@@ -1,17 +1,22 @@
-const Button = ({ className, children, size, ...rest }) => {
+import clsx from "clsx";
+
+const Button = ({ size, variant, onClick, children }) => {
   /**
-   * Challenge: See if you can fix the problem with the
-   * conflicting `className` props. Doesn't need to be
-   * elegant, just see if you can get the button to be
-   * both large AND with green text
+   * Challenge:
+   *
+   * Accept a `variant` prop and style the Button component
+   * accordingly. The values can be `success`, `warning`, or `danger`.
+   * Check the Figma design at
+   * figma.com/file/xHMiy8Br1RvAMeATTV9jUH/React-Components?node-id=9%3A302
+   * for the specific colors to be used for each variant.
    */
 
-  let sizeClass;
-  if (size === "sm") sizeClass = "button-small";
-  if (size === "lg") sizeClass = "button-large";
+  let sizeClass = size ? `button-${size}` : "";
+  let variantClass = variant ? variant : "";
+  const allClasses = clsx(sizeClass, variantClass);
 
   return (
-    <button className={`${sizeClass} ${className}`} {...rest}>
+    <button className={allClasses} onClick={onClick}>
       {children}
     </button>
   );

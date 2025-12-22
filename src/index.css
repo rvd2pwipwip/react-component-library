@@ -33,15 +33,29 @@ button {
   gap: 0.5rem;
 }
 
-button.button-small {
+button.button-sm {
   padding: 7px 11px;
   font-size: 12px;
 }
 
-button.button-large {
+button.button-lg {
   padding: 30px 40px;
 }
 
-.green {
-  color: green;
+button.success {
+  border: 1px solid #047857;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+button.warning {
+  border: 1px solid #fbbf24;
+  background: #fffbeb;
+  color: #997417;
+}
+
+button.danger {
+  border: 1px solid #f87171;
+  background: #fef2f2;
+  color: #f87171;
 }

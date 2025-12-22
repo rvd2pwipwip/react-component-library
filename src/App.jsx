@@ -8,7 +8,7 @@ const handleClick = () => console.log("Logging in...");
 function App() {
   return (
     <main>
-      <Button onClick={handleClick} size="lg" className="green">
+      <Button onClick={handleClick} size="lg" variant="success">
         <FaMoneyBill />
         Buy now!
       </Button>
