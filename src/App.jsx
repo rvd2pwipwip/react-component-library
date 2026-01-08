@@ -4,6 +4,8 @@ import "./App.css";
 import Button from "./Components/Button/Button";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/Menu";
+import MenuButton from "./Components/Menu/MenuButton";
+import MenuDropdown from "./Components/Menu/MenuDropdown";
 import { FaMoneyBill } from "react-icons/fa6";
 
 /**
@@ -39,10 +41,12 @@ function App() {
       {/* <Avatar>BZ</Avatar>
       <br /> */}
       {/* <Avatar /> */}
-      <Menu
-        buttonText="Sports"
-        items={["Tennis", "Pickleball", "Racquetball", "Squash"]}
-      />
+      <Menu>
+        <MenuButton>Sports</MenuButton>
+        <MenuDropdown
+          items={["Tennis", "Pickleball", "Racquetball", "Squash"]}
+        ></MenuDropdown>
+      </Menu>
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 
-const MenuButton = ({ buttonText, onClick }) => {
-  return <Button onClick={onClick}>{buttonText}</Button>;
+const MenuButton = ({ children, onClick }) => {
+  return <Button onClick={onClick}>{children}</Button>;
 };
 
 export default MenuButton;
