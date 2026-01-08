@@ -15,7 +15,11 @@ const Avatar = ({ src, alt, children }) => {
       </div>
     );
   } else if (children) {
-    avatarType = <div className="avatar avatar-letters">{children}</div>;
+    avatarType = (
+      <div className={`avatar avatar-letters ${setRandomColor()}`}>
+        {children}
+      </div>
+    );
   } else {
     avatarType = (
       <div className={`avatar avatar-icon ${setRandomColor()}`}>
@@ -26,8 +30,6 @@ const Avatar = ({ src, alt, children }) => {
 
   return <>{avatarType}</>;
 };
-
-// ${setRandomColor()}
 
 /**
  * Challenge: Create a flexible Avatar component!
