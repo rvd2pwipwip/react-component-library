@@ -1,5 +1,5 @@
-const MenuDropdown = ({ children }) => {
-  return <div className="menu-dropdown">{children}</div>;
+const MenuDropdown = ({ children, open }) => {
+  return open && <div className="menu-dropdown">{children}</div>;
 };
 
 export default MenuDropdown;

@@ -14,16 +14,6 @@ const handleClick = () => console.log("Logging in...");
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
 
-  /**
-   * 1. MenuDropdown should render children instead of items
-   * 2. MenuItem (new component you need to create) should also
-   *    render children. Grab the <div className="menu-item">
-   *    from MenuDropdown before deleting it if you want to be
-   *    lazy :)
-   * 3. Map over the `sports` array inside MenuDropdown in this
-   *    file and render a MenuItem for each sport in the array
-   */
-
   return (
     <main>
       {/* <Button onClick={handleClick} size="lg" variant="success">
