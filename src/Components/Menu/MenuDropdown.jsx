@@ -1,4 +1,5 @@
 import React from "react";
+import Toggle from "../../Toggle/index";
 import { ToggleContext } from "../../Toggle/Toggle";
 import { MenuContext } from "./Menu";
 
@@ -7,9 +8,11 @@ const MenuDropdown = ({ children }) => {
   const { menuId } = React.useContext(MenuContext);
 
   return (
-    <div className="menu-dropdown" aria-hidden={!boolean} id={menuId}>
-      {children}
-    </div>
+    <Toggle.On>
+      <div className="menu-dropdown" aria-hidden={!boolean} id={menuId}>
+        {children}
+      </div>
+    </Toggle.On>
   );
 };
 
