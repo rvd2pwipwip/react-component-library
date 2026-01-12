@@ -1,5 +1,4 @@
-const MenuItem = ({ children, open, toggle }) => {
-  console.log(`MenuItem open: ${open} toggle: ${toggle}`);
+const MenuItem = ({ children }) => {
   return <div className="menu-item">{children}</div>;
 };
 

@@ -1,7 +1,10 @@
+import React from "react";
 import Button from "../Button/Button";
+import { MenuContext } from "./Menu";
 
-const MenuButton = ({ children, toggle, open }) => {
-  console.log(`Menu Button open: ${open} toggle: ${toggle}`);
+const MenuButton = ({ children }) => {
+  const { toggle } = React.useContext(MenuContext);
+
   return <Button onClick={toggle}>{children}</Button>;
 };
 

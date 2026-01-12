@@ -1,21 +1,10 @@
 import React from "react";
+import { MenuContext } from "./Menu";
 
-/** Discovery Challenge 2:
- * Make it so the children of MenuDropdown also have
- * access to toggle and open.
- */
+const MenuDropdown = ({ children }) => {
+  const { open } = React.useContext(MenuContext);
 
-const MenuDropdown = ({ children, open, toggle }) => {
-  console.log(`MenuDropdown open: ${open} toggle: ${toggle}`);
-  return (
-    open && (
-      <div className="menu-dropdown">
-        {React.Children.map(children, (child) => {
-          return React.cloneElement(child, { open, toggle });
-        })}
-      </div>
-    )
-  );
+  return open && <div className="menu-dropdown">{children}</div>;
 };
 
 export default MenuDropdown;

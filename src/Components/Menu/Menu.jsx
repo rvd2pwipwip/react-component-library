@@ -1,24 +1,27 @@
 import React from "react";
 
+const MenuContext = React.createContext();
+
 export default function Menu({ children }) {
-  const [open, setOpen] = React.useState(true);
-
-  function toggle() {
-    setOpen((prevOpen) => !prevOpen);
-  }
-
-  /** Discovery Challenge 1:
-   * In the MenuButton, MenuDropdown, and MenuItem components,
-   * accept `toggle` and `open` props and just console log
-   * both of them in all 3 components.
+  /**
+   * Challenge:
+   * Using what you know now, complete the Menu component so
+   * everything is working again via Context + State
    */
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggle = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
 
   return (
     <div className="menu">
-      {/* {children} replaced with React.Children.map(...) */}
-      {React.Children.map(children, (child) => {
-        return React.cloneElement(child, { open, toggle });
-      })}
+      <MenuContext.Provider value={{ open, toggle }}>
+        {children}
+      </MenuContext.Provider>
     </div>
   );
 }
+
+export { MenuContext };

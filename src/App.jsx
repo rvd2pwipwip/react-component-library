@@ -9,7 +9,7 @@ import MenuDropdown from "./Components/Menu/MenuDropdown";
 import MenuItem from "./Components/Menu/MenuItem";
 import { FaMoneyBill } from "react-icons/fa6";
 
-const handleClick = () => console.log("Logging in...");
+// const handleClick = () => console.log("Logging in...");
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
