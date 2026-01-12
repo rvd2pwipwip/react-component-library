@@ -1,17 +1,14 @@
 import React from "react";
 import Button from "../Button/Button";
+import { ToggleContext } from "../../Toggle/Toggle";
 import { MenuContext } from "./Menu";
 
 const MenuButton = ({ children }) => {
-  const { toggle, open, menuId } = React.useContext(MenuContext);
+  const { boolean } = React.useContext(ToggleContext);
+  const { menuId } = React.useContext(MenuContext);
 
   return (
-    <Button
-      onClick={toggle}
-      aria-expanded={open}
-      aria-haspopup="true"
-      aria-controls={menuId}
-    >
+    <Button aria-expanded={boolean} aria-haspopup="true" aria-controls={menuId}>
       {children}
     </Button>
   );

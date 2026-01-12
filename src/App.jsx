@@ -11,20 +11,20 @@ import { BsStar, BsStarFill } from "react-icons/bs";
 // const handleClick = () => console.log("Logging in...");
 
 /**
- * Challenge: refactor our app to use the Toggle.On
- * and Toggle.Off components to conditionally render the
- * star icons from react-icons. (See Star.js for that code).
+ * Challenge: Refactor the Menu components to use the logic
+ * from Toggle instead of doing any logic of its own.
  *
- * Reminders:
- * 1. Make sure to copy over the classNames from Star.js too!
- *    I've added some CSS that we don't want to lose.
- * 2. Clicking the Star should flip the Toggle state. Try to
- *    figure out how you can do that 🤔. Hint: we built something
- *    that lets us flip the Toggle state back and forth 😉
+ * 1. Remove all context and state logic from the menu components
+ *    !!! Except for the menu context needed for the aria attributes for A11y !!!
+ * 2. Using Toggle and its "sub-components, add a menu to this
+ *    App component below the Star. Make sure to use a separate
+ *    <Toggle> wrapper so the state isn't tied to the Star's
+ *    Toggle state
  */
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
+  const dances = ["Salsa", "Bachata", "Cha Cha Cha", "Kizomba"];
 
   return (
     <main>
@@ -48,14 +48,36 @@ function App() {
         </Toggle.Button>
       </Toggle>
       <br />
-      <Menu>
-        <Menu.Button>Sports</Menu.Button>
-        <Menu.Dropdown>
-          {sports.map((sport) => {
-            return <Menu.Item key={sport}>{sport}</Menu.Item>;
-          })}
-        </Menu.Dropdown>
-      </Menu>
+      <div className="menuBar">
+        <Toggle>
+          <Menu>
+            <Toggle.Button>
+              <Menu.Button>Sports</Menu.Button>
+            </Toggle.Button>
+            <Toggle.On>
+              <Menu.Dropdown>
+                {sports.map((sport) => {
+                  return <Menu.Item key={sport}>{sport}</Menu.Item>;
+                })}
+              </Menu.Dropdown>
+            </Toggle.On>
+          </Menu>
+        </Toggle>
+        <Toggle>
+          <Menu>
+            <Toggle.Button>
+              <Menu.Button>Dances</Menu.Button>
+            </Toggle.Button>
+            <Toggle.On>
+              <Menu.Dropdown>
+                {dances.map((dance) => {
+                  return <Menu.Item key={dance}>{dance}</Menu.Item>;
+                })}
+              </Menu.Dropdown>
+            </Toggle.On>
+          </Menu>
+        </Toggle>
+      </div>
     </main>
   );
 }
