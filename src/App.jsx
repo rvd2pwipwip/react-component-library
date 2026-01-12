@@ -3,10 +3,7 @@ import "./App.css";
 // import tito from "./images/tito.jpg";
 import Button from "./Components/Button/Button";
 import Avatar from "./Components/Avatar";
-import Menu from "./Components/Menu/Menu";
-import MenuButton from "./Components/Menu/MenuButton";
-import MenuDropdown from "./Components/Menu/MenuDropdown";
-import MenuItem from "./Components/Menu/MenuItem";
+import Menu from "./Components/Menu/index";
 import { FaMoneyBill } from "react-icons/fa6";
 
 // const handleClick = () => console.log("Logging in...");
@@ -26,12 +23,12 @@ function App() {
       <br /> */}
       {/* <Avatar /> */}
       <Menu>
-        <MenuButton>Sports</MenuButton>
-        <MenuDropdown>
+        <Menu.Button>Sports</Menu.Button>
+        <Menu.Dropdown>
           {sports.map((sport) => {
-            return <MenuItem key={sport}>{sport}</MenuItem>;
+            return <Menu.Item key={sport}>{sport}</Menu.Item>;
           })}
-        </MenuDropdown>
+        </Menu.Dropdown>
       </Menu>
     </main>
   );
