@@ -3,24 +3,19 @@ import React from "react";
 const MenuContext = React.createContext();
 
 export default function Menu({ children }) {
-  /**
-   * Challenge:
-   * Using what you know now, complete the Menu component so
-   * everything is working again via Context + State
-   */
-
   const [open, setOpen] = React.useState(false);
+  const menuId = React.useId();
 
   const toggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
   return (
-    <div className="menu">
-      <MenuContext.Provider value={{ open, toggle }}>
+    <MenuContext.Provider value={{ open, toggle, menuId }}>
+      <div className="menu" role="menu">
         {children}
-      </MenuContext.Provider>
-    </div>
+      </div>
+    </MenuContext.Provider>
   );
 }
 
