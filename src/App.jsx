@@ -4,6 +4,8 @@ import "./App.css";
 import Button from "./Components/Button/Button";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/index";
+import Star from "./Components/Star";
+import Toggle from "./Components/Toggle";
 import { FaMoneyBill } from "react-icons/fa6";
 
 // const handleClick = () => console.log("Logging in...");
@@ -22,6 +24,10 @@ function App() {
       {/* <Avatar>BZ</Avatar>
       <br /> */}
       {/* <Avatar /> */}
+      <Toggle>
+        <Star />
+      </Toggle>
+      <br />
       <Menu>
         <Menu.Button>Sports</Menu.Button>
         <Menu.Dropdown>
