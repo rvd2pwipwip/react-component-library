@@ -5,7 +5,7 @@ import Button from "./Components/Button/Button";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/index";
 import Star from "./Components/Star";
-import Toggle from "./Components/Toggle";
+import Toggle from "./Toggle/index";
 import { FaMoneyBill } from "react-icons/fa6";
 
 // const handleClick = () => console.log("Logging in...");
@@ -25,7 +25,9 @@ function App() {
       <br /> */}
       {/* <Avatar /> */}
       <Toggle>
-        <Star />
+        <Toggle.Button>
+          <Star />
+        </Toggle.Button>
       </Toggle>
       <br />
       <Menu>
