@@ -9,13 +9,6 @@ import { FaMoneyBill } from "react-icons/fa6";
 
 // const handleClick = () => console.log("Logging in...");
 
-/**
- * Challenge:
- * Move other Toggle logic to be composed with the Menu
- * components internally, so the person using our Menu
- * component never needs to touch the generic Toggle at all.
- */
-
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
   const dances = ["Salsa", "Bachata", "Cha Cha Cha", "Kizomba"];
@@ -31,14 +24,14 @@ function App() {
       {/* <Avatar>BZ</Avatar>
       <br /> */}
       {/* <Avatar /> */}
-      <Star
-        onChange={() => {
-          console.log("changed star");
-        }}
-      />
+      <Star onChange={() => {}} />
       <br />
-      {/* <div className="menuBar">
-        <Menu>
+      <div className="menuBar">
+        <Menu
+          onOpen={() => {
+            console.log("menu open");
+          }}
+        >
           <Menu.Button>Sports</Menu.Button>
           <Menu.Dropdown>
             {sports.map((sport) => {
@@ -47,7 +40,11 @@ function App() {
           </Menu.Dropdown>
         </Menu>
 
-        <Menu>
+        <Menu
+          onOpen={() => {
+            console.log("menu open");
+          }}
+        >
           <Menu.Button>Dances</Menu.Button>
           <Menu.Dropdown>
             {dances.map((dance) => {
@@ -55,7 +52,7 @@ function App() {
             })}
           </Menu.Dropdown>
         </Menu>
-      </div> */}
+      </div>
     </main>
   );
 }
