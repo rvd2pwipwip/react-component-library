@@ -18,7 +18,7 @@ import React from "react";
 
 const ToggleContext = React.createContext();
 
-const Toggle = ({ children, onToggle }) => {
+const Toggle = ({ children, onToggle = () => {} }) => {
   const [boolean, setBoolean] = React.useState(false);
 
   const toggle = () => {

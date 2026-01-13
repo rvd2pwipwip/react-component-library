@@ -24,7 +24,7 @@ function App() {
       {/* <Avatar>BZ</Avatar>
       <br /> */}
       {/* <Avatar /> */}
-      <Star onChange={() => {}} />
+      <Star />
       <br />
       <div className="menuBar">
         <Menu
