@@ -1,9 +1,17 @@
 import Toggle from "../Toggle/index";
 import { BsStar, BsStarFill } from "react-icons/bs";
 
-const Star = () => {
+/**
+ * Challenge:
+ * 1. Receive a prop called onChange and pass it to the
+ *    Toggle's onToggle function
+ * 2. Add an onChange prop to the Star component instance
+ *    in index.js that just runs a console.log() for now.
+ */
+
+const Star = ({ onChange }) => {
   return (
-    <Toggle>
+    <Toggle onToggle={onChange}>
       <Toggle.Button>
         <Toggle.On>
           <BsStarFill className="star filled" />

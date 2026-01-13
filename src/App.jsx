@@ -31,9 +31,13 @@ function App() {
       {/* <Avatar>BZ</Avatar>
       <br /> */}
       {/* <Avatar /> */}
-      <Star />
+      <Star
+        onChange={() => {
+          console.log("changed star");
+        }}
+      />
       <br />
-      <div className="menuBar">
+      {/* <div className="menuBar">
         <Menu>
           <Menu.Button>Sports</Menu.Button>
           <Menu.Dropdown>
@@ -51,7 +55,7 @@ function App() {
             })}
           </Menu.Dropdown>
         </Menu>
-      </div>
+      </div> */}
     </main>
   );
 }
