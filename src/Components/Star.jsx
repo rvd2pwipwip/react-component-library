@@ -1,4 +1,4 @@
-import Toggle from "../Toggle/index";
+import Toggle from "./Toggle/index";
 import { BsStar, BsStarFill } from "react-icons/bs";
 
 const Star = ({ onChange }) => {

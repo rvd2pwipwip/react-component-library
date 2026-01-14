@@ -5,44 +5,19 @@ import Button from "./Components/Button/Button";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/index";
 import Star from "./Components/Star";
-import Toggle from "./Toggle/index";
+import Toggle from "./Components/Toggle/index";
 import { FaMoneyBill } from "react-icons/fa6";
 
 // const handleClick = () => console.log("Logging in...");
 
-/**
- * Challenge:
- * Part 1:
- * Create a ToggleDisplay component and attach
- * it to Toggle as Toggle.Display.
- *
- * It should grab the `boolean` value from the Toggle context
- * and render children by calling children as a function,
- * passing the `boolean` value to it. (E.g. children(boolean)).
- */
-
-/**
- * Challenge:
- * Part 2:
- * Instead of rendering Toggle.On and Toggle.Off, use a single
- * Toggle.Display to render the div below. Toggle.Display will
- * take a function as a child (don't forget to wrap that function
- * in curly braces since it's JS inside of JSX) and will receive
- * the `boolean` state as its parameter.
- *
- * From that function, you should return the div below, but this
- * time conditionally render the `filled` className based on
- * the value of `boolean`.
- *
- * You'll know it worked if clicking the box shows a transition
- * between the white background and the blue background. See
- * style.css for details on what's happening there.
- */
-
 function App() {
   return (
     <>
-      <Toggle>
+      <Toggle
+        onToggle={() => {
+          console.log("Toggled");
+        }}
+      >
         <Toggle.Button>
           <Toggle.Display>
             {(boolean) => {

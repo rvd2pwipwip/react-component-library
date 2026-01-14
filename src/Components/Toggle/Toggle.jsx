@@ -1,4 +1,5 @@
 import React from "react";
+import useEffectOnUpdate from "../Hooks/useEffectOnUpdate";
 
 const ToggleContext = React.createContext();
 
@@ -9,11 +10,14 @@ const Toggle = ({ children, onToggle = () => {} }) => {
     setBoolean((prevBool) => !prevBool);
   };
 
-  const firstRender = React.useRef(true);
+  /**
+   * Challenge: use our new, shiny custom hook
+   * to set up the effect again. You'll know it's
+   * working when the console log runs after clicking
+   * the box, but not on the initial render.
+   */
 
-  React.useEffect(() => {
-    firstRender.current ? (firstRender.current = false) : onToggle();
-  }, [boolean]);
+  useEffectOnUpdate(onToggle, [boolean]);
 
   return (
     <ToggleContext.Provider value={{ boolean, toggle }}>

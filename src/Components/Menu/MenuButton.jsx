@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
-import Toggle from "../../Toggle/index";
-import { ToggleContext } from "../../Toggle/Toggle";
+import Toggle from "../Toggle/index";
+import { ToggleContext } from "../Toggle/Toggle";
 import { MenuContext } from "./Menu";
 
 const MenuButton = ({ children }) => {

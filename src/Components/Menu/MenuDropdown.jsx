@@ -1,6 +1,6 @@
 import React from "react";
-import Toggle from "../../Toggle/index";
-import { ToggleContext } from "../../Toggle/Toggle";
+import Toggle from "../Toggle/index";
+import { ToggleContext } from "../Toggle/Toggle";
 import { MenuContext } from "./Menu";
 
 const MenuDropdown = ({ children }) => {
