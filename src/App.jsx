@@ -11,8 +11,8 @@ import { FaMoneyBill } from "react-icons/fa6";
 // const handleClick = () => console.log("Logging in...");
 
 function App() {
-  // const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
-  // const dances = ["Salsa", "Bachata", "Cha Cha Cha", "Kizomba"];
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
+  const dances = ["Salsa", "Bachata", "Cha Cha Cha", "Kizomba"];
   return (
     <main>
       {/* <Button onClick={handleClick} size="lg" variant="success">
@@ -24,14 +24,10 @@ function App() {
       {/* <Avatar>BZ</Avatar>
       <br /> */}
       {/* <Avatar /> */}
-      <Star />
+      {/* <Star /> */}
       <br />
-      {/* <div className="menuBar">
-        <Menu
-          onOpen={() => {
-            console.log("menu open");
-          }}
-        >
+      <div className="menuBar">
+        <Menu>
           <Menu.Button>Sports</Menu.Button>
           <Menu.Dropdown>
             {sports.map((sport) => {
@@ -39,11 +35,7 @@ function App() {
             })}
           </Menu.Dropdown>
         </Menu>
-        <Menu
-          onOpen={() => {
-            console.log("menu open");
-          }}
-        >
+        <Menu>
           <Menu.Button>Dances</Menu.Button>
           <Menu.Dropdown>
             {dances.map((dance) => {
@@ -51,7 +43,7 @@ function App() {
             })}
           </Menu.Dropdown>
         </Menu>
-      </div> */}
+      </div>
     </main>
   );
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
 const useToggle = () => {
-  const [boolean, setBoolean] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-  const toggle = () => {
-    setBoolean((prevBool) => !prevBool);
+  const toggleOpen = () => {
+    setOpen((prevBool) => !prevBool);
   };
 
-  return [boolean, toggle];
+  return [open, toggleOpen];
 };
 
 export default useToggle;
