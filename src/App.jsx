@@ -27,7 +27,7 @@ function App() {
       {/* <Star /> */}
       <br />
       <div className="menuBar">
-        <Menu>
+        <Menu onOpen={() => console.log("opened/closed")}>
           <Menu.Button>Sports</Menu.Button>
           <Menu.Dropdown>
             {sports.map((sport) => {
