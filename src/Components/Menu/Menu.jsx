@@ -4,7 +4,7 @@ import useToggle from "../Hooks/useToggle";
 const MenuContext = React.createContext();
 
 const Menu = ({ children }) => {
-  const [open, toggleOpen] = useToggle();
+  const { bool: open, toggle: toggleOpen } = useToggle();
   const menuId = React.useId();
 
   return (
