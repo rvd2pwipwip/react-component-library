@@ -30,7 +30,7 @@ main {
 Button
 *************************/
 
-button {
+/* button {
   background-color: #e5e7eb;
   color: #4b5563;
   border: 1px solid #6b7280;
@@ -71,7 +71,7 @@ button.danger {
   border: 1px solid #f87171;
   background: #fef2f2;
   color: #f87171;
-}
+} */
 
 /************************* 
 Avatar

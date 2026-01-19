@@ -8,17 +8,17 @@ import Star from "./Components/Star";
 import Toggle from "./Components/Toggle/index";
 import { FaMoneyBill } from "react-icons/fa6";
 
-// const handleClick = () => console.log("Logging in...");
+const handleClick = () => console.log("Logging in...");
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
   const dances = ["Salsa", "Bachata", "Cha Cha Cha", "Kizomba"];
   return (
     <main>
-      {/* <Button onClick={handleClick} size="lg" variant="success">
+      <Button onClick={handleClick} size="lg" variant="success">
         <FaMoneyBill />
         Buy now!
-      </Button> */}
+      </Button>
       {/* <Avatar src={tito} alt="Tito Litho" />
       <br /> */}
       {/* <Avatar>BZ</Avatar>

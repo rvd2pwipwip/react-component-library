@@ -1,12 +1,13 @@
 import clsx from "clsx";
+import styles from "./Button.module.css";
 
 const Button = ({ size, variant, onClick, children }) => {
-  let sizeClass = size ? `button-${size}` : "";
-  let variantClass = variant ? variant : "";
+  let sizeClass = size ? styles[size] : "";
+  let variantClass = variant ? styles[variant] : "";
   const allClasses = clsx(sizeClass, variantClass);
 
   return (
-    <button className={allClasses} onClick={onClick}>
+    <button className={clsx(styles.button, allClasses)} onClick={onClick}>
       {children}
     </button>
   );
