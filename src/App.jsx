@@ -2,6 +2,7 @@
 import "./App.css";
 // import tito from "./images/tito.jpg";
 import Button from "./Components/Button/Button";
+import Badge from "./Components/Badge/Badge";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/index";
 import Star from "./Components/Star";
@@ -9,6 +10,7 @@ import Toggle from "./Components/Toggle/index";
 import { FaMoneyBill } from "react-icons/fa6";
 
 const handleClick = () => console.log("Logging in...");
+const handleBadgeClick = () => console.log("Badge clicked");
 
 function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"];
@@ -19,6 +21,10 @@ function App() {
         <FaMoneyBill />
         Buy now!
       </Button>
+      <br />
+      <Badge onClick={handleBadgeClick} color="yellow" variant="pill">
+        Badge
+      </Badge>
       {/* <Avatar src={tito} alt="Tito Litho" />
       <br /> */}
       {/* <Avatar>BZ</Avatar>
