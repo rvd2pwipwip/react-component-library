@@ -3,6 +3,7 @@ import "./App.css";
 // import tito from "./images/tito.jpg";
 import Button from "./Components/Button/Button";
 import Badge from "./Components/Badge/Badge";
+import Banner from "./Components/Banner/Banner";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/index";
 import Star from "./Components/Star";
@@ -25,6 +26,20 @@ function App() {
       <Badge onClick={handleBadgeClick} color="yellow" variant="pill">
         Badge
       </Badge>
+      <br />
+      <Banner title="The real banner title" status="success"></Banner>
+      <br />
+      <Banner title="The real banner title">
+        {/* <img src={tito} alt="tito"></img> */}
+      </Banner>
+      <br />
+      <Banner title="The real banner title" status="warning">
+        This is a banner with a text
+      </Banner>
+      <br />
+      <Banner title="The real banner title" status="danger">
+        This is a banner with a text
+      </Banner>
       {/* <Avatar src={tito} alt="Tito Litho" />
       <br /> */}
       {/* <Avatar>BZ</Avatar>
