@@ -4,6 +4,7 @@ import "./App.css";
 import Button from "./Components/Button/Button";
 import Badge from "./Components/Badge/Badge";
 import Banner from "./Components/Banner/Banner";
+import Card from "./Components/Card/Card";
 import Avatar from "./Components/Avatar";
 import Menu from "./Components/Menu/index";
 import Star from "./Components/Star";
@@ -29,17 +30,21 @@ function App() {
       <br />
       <Banner title="The real banner title" status="success"></Banner>
       <br />
-      <Banner title="The real banner title">
-        {/* <img src={tito} alt="tito"></img> */}
-      </Banner>
+      <Card icon={FaMoneyBill} iconBg="#5b21b6" iconColor="#FFF">
+        <h2>Card title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
+      </Card>
       <br />
-      <Banner title="The real banner title" status="warning">
-        This is a banner with a text
-      </Banner>
-      <br />
-      <Banner title="The real banner title" status="danger">
-        This is a banner with a text
-      </Banner>
+      <Card>
+        <h2>Card title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
+      </Card>
       {/* <Avatar src={tito} alt="Tito Litho" />
       <br /> */}
       {/* <Avatar>BZ</Avatar>
